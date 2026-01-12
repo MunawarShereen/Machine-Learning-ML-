@@ -29,8 +29,8 @@ Feature transformation involves modifying existing data to make it cleaner, more
   Converting text-based categories into numerical values, since Machine Learning models work with numbers, not words.
 
 * **Real-World Example:**  
-  A column named `Color` contains values like `Red`, `Green`, and `Blue`. You convert them into numbers such as:  
-  `Red = 1`, `Green = 2`, `Blue = 3`.
+  A column named `Education` contains values like `School`, `College`, and `University`. You convert them into numbers such as:  
+  `School = 1`, `College = 2`, `University = 3`.
 
 ---
 
