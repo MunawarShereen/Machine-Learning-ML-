@@ -149,6 +149,7 @@ m_{\text{new}} = m_{\text{old}} - (\text{Learning Rate} \times \text{Slope}_m)
 
 **Problem:**  
 Gradient Descent may get **stuck in a Local Minimum** and miss the Global Minimum.
+<img width="3999" height="3999" alt="image" src="https://github.com/user-attachments/assets/387832ef-6a64-4547-805a-96086a099654" />
 
 ---
 ### B. Effect of Learning Rate (\(\eta\))
