@@ -25,9 +25,9 @@ $$
 
 Now, instead of updating just \(m\) and \(b\), we must update **all parameters**:
 
-\[
+$$
 \beta_0, \beta_1, \beta_2, \dots, \beta_n
-\]
+$$
 
 **All of them are updated simultaneously.**
 
@@ -53,8 +53,8 @@ One update = one full pass over the dataset.
 Before learning begins:
 - The algorithm checks how many input features you have.
 - For **\(n\)** features, it creates:
-  - **\(n\) weights**: \(\beta_1, \beta_2, \dots, \beta_n\)
-  - **1 intercept**: \(\beta_0\)
+- **Weights (coefficients)**: $\beta_1, \beta_2, \dots, \beta_n$
+- **Intercept**: $\beta_0$
 
 All parameters are initialized to a default value (usually **0 or 1**).
 
@@ -67,13 +67,14 @@ This is just a **rough guess**.
 Instead of predicting row-by-row, the model uses **matrix multiplication**.
 
 - **Input Matrix**: \(X\) (all rows × all features)
-- **Weight Vector**: \(\beta\)
+- **Weight Vector**: $\beta$
 
 Prediction for all rows at once:
 
-\[
-\hat{y} = X \cdot \beta
-\]
+$$
+\hat{y} = X \cdot \boldsymbol{\beta}
+$$
+
 
 This generates predictions for **every row simultaneously**  
 Much faster than loops  
@@ -87,9 +88,10 @@ Now the model measures **how wrong** the predictions are.
 
 **Error vector:**
 
-\[
+$$
 \text{Error} = \hat{y} - y
-\]
+$$
+
 
 ---
 
@@ -110,10 +112,14 @@ Each feature contributes differently to the error.
 
 The gradient for all weights together is:
 
-\[
-\nabla_{\beta}
-= \frac{1}{m} X^T (\hat{y} - y)
-\]
+$$
+\frac{\partial L}{\partial \beta_0}
+=
+\frac{1}{m}
+\sum_{i=1}^{m}
+\left( \hat{y}_i - y_i \right)
+$$
+
 
 This uses a **dot product** to calculate how responsible each feature is for the total error.
 
@@ -125,9 +131,14 @@ Once gradients are computed, parameters are updated using the **Learning Rate (\
 
 **Update Rule:**
 
-\[
-\beta_{\text{new}} = \beta_{\text{old}} - \eta \cdot \nabla_{\beta}
-\]
+$$
+\boldsymbol{\beta}_{\text{new}}
+=
+\boldsymbol{\beta}_{\text{old}}
+-
+\eta \cdot \nabla_{\boldsymbol{\beta}} L
+$$
+
 
 This moves the weights **closer to the minimum loss**.
 
