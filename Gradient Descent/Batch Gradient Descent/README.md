@@ -4,9 +4,10 @@
 
 In the simple case of Linear Regression:
 
-\[
+$$
 y = mx + b
-\]
+$$
+
 
 we had:
 - **One input feature** (\(x\))
@@ -23,11 +24,13 @@ $$
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \dots + \beta_n x_n
 $$
 
+
 Now, instead of updating just \(m\) and \(b\), we must update **all parameters**:
 
 $$
 \beta_0, \beta_1, \beta_2, \dots, \beta_n
 $$
+
 
 **All of them are updated simultaneously.**
 
@@ -53,8 +56,8 @@ One update = one full pass over the dataset.
 Before learning begins:
 - The algorithm checks how many input features you have.
 - For **\(n\)** features, it creates:
-- **Weights (coefficients)**: $\beta_1, \beta_2, \dots, \beta_n$
-- **Intercept**: $\beta_0$
+  - $n$ weights: $\beta_1, \beta_2, \dots, \beta_n$
+  - **1 intercept**: $\beta_0$
 
 All parameters are initialized to a default value (usually **0 or 1**).
 
@@ -66,8 +69,8 @@ This is just a **rough guess**.
 
 Instead of predicting row-by-row, the model uses **matrix multiplication**.
 
-- **Input Matrix**: \(X\) (all rows × all features)
-- **Weight Vector**: $\beta$
+- **Input Matrix**: $X$ (all rows × all features)
+- **Weight Vector**: $\boldsymbol{\beta}$
 
 Prediction for all rows at once:
 
@@ -95,22 +98,9 @@ $$
 
 ---
 
-##### A. Gradient for the Intercept (\(\beta_0\))
+##### A. Gradient for the Intercept ($\beta_0$)
 
 Since \(\beta_0\) affects **every row equally**, its gradient is the **mean error**:
-
-\[
-\frac{\partial L}{\partial \beta_0}
-= \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)
-\]
-
----
-
-##### B. Gradient for the Weights (\(\beta_1, \beta_2, \dots\))
-
-Each feature contributes differently to the error.
-
-The gradient for all weights together is:
 
 $$
 \frac{\partial L}{\partial \beta_0}
@@ -118,6 +108,23 @@ $$
 \frac{1}{m}
 \sum_{i=1}^{m}
 \left( \hat{y}_i - y_i \right)
+$$
+
+
+---
+
+##### B. Gradient for the Weights ($\beta_1, \beta_2, \dots$)
+
+Each feature contributes differently to the error.
+
+The gradient for all weights together is:
+
+$$
+\nabla_{\boldsymbol{\beta}}
+=
+\frac{1}{m}
+X^{T}
+\left( \hat{y} - y \right)
 $$
 
 
@@ -136,7 +143,7 @@ $$
 =
 \boldsymbol{\beta}_{\text{old}}
 -
-\eta \cdot \nabla_{\boldsymbol{\beta}} L
+\eta \cdot \nabla_{\boldsymbol{\beta}}
 $$
 
 
