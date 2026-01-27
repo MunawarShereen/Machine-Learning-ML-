@@ -19,9 +19,9 @@ House Price depends on **Size, Rooms, Location, Age**, etc.
 
 So the equation becomes:
 
-\[
+$$
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \dots + \beta_n x_n
-\]
+$$
 
 Now, instead of updating just \(m\) and \(b\), we must update **all parameters**:
 
