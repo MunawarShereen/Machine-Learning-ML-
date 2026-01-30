@@ -12,7 +12,8 @@ It is a **Supervised Learning** algorithm used for **Regression tasks**, where t
 **Goal:**  
 To find the **Best Fit Line** that passes through the data points with **minimum error**.
 
-<img width="3000" height="2000" alt="image" src="https://github.com/user-attachments/assets/28474827-a8db-4c61-8c72-5e1e8eece656" />
+<img width="3000" height="2000" alt="image" src="https://github.com/user-attachments/assets/6e8bc140-0bdb-4525-9ec1-3e38d1acb61e" />
+
 
 ---
 
