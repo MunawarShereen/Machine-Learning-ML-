@@ -78,4 +78,74 @@ This is the **“Random”** part of Random Forest.
 Once all trees are trained, new data is passed to **every tree**.
 
 #### For Classification (Majority Voting)
+- Tree 1 → Yes
+- Tree 2 → No
+- Tree 3 → Yes
+
+
+**Final Output:** Yes (majority wins)
+
+---
+
+#### For Regression (Averaging)
+- Tree 1 → 50
+- Tree 2 → 60
+- Tree 3 → 55
+
+  
+$$
+\text{Final Prediction} = \frac{50 + 60 + 55}{3} = 55
+$$
+
+---
+
+## 3. Why Use Random Forest? (Benefits)
+
+- **Reduced Overfitting**  
+  Averages results of many trees, canceling individual errors
+
+- **High Accuracy**  
+  One of the best-performing algorithms for **tabular data**
+
+- **Handles Missing Values**  
+  Maintains good performance even when data is incomplete
+
+---
+
+## 4. Key Hyperparameters
+
+Important parameters you can tune in code:
+
+- **`n_estimators`**  
+  Number of trees in the forest (e.g., 100)
+
+- **`max_features`**  
+  Number of features considered at each split
+
+- **`bootstrap`**  
+  Whether to use sampling with replacement (`True` / `False`)
+
+---
+
+## 5. Summary Formulas
+
+### Classification
+
+$$
+\text{Final Prediction}=\text{Mode}(\text{Tree}_1, \text{Tree}_2, \dots, \text{Tree}_n)
+$$
+
+---
+
+### Regression
+
+$$
+\text{Final Prediction}=\text{Mean}(\text{Tree}_1, \text{Tree}_2, \dots, \text{Tree}_n)
+$$
+
+---
+
+### ✅ Final Takeaway
+Random Forest is **robust, accurate, and reliable** because it relies on **many weak learners** instead of one strong but risky model.
+
 
