@@ -29,6 +29,9 @@ Random Forest follows a **4-step process**.
 
 ---
 
+<img width="3058" height="1629" alt="image" src="https://github.com/user-attachments/assets/7ae243cf-96a2-4a50-82ce-a812f28f6199" />
+
+---
 ### Step 1: Bootstrapping (Random Data Selection)
 
 - The algorithm creates **multiple random datasets** from the original data
