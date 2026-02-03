@@ -28,6 +28,9 @@ To solve this, Logistic Regression uses the **Sigmoid Function**.
 - Produces an **S-shaped curve** (Sigmoid Curve)
 - Unlike Linear Regression’s straight line
 
+  <img width="2048" height="2047" alt="image" src="https://github.com/user-attachments/assets/bde6af7c-70e2-47b0-a18f-0b4a89d222eb" />
+
+
 ### Formula
 
 $$
