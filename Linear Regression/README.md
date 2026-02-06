@@ -23,9 +23,7 @@ There is a reason why almost every Machine Learning course starts with Linear Re
 
 - **Easy to Understand:**  
   Based on simple high-school mathematics:  
-  \[
-  y = mx + c
-  \]
+  $y = mx + c$
 
 - **Strong Foundation:**  
   Many advanced algorithms (Logistic Regression, Neural Networks) are built on top of Linear Regression.
@@ -48,9 +46,7 @@ There are **four main variations**, depending on data complexity.
 Used when there is **one input feature** and **one output target**.
 
 **Equation:**
-\[
-y = mx + b
-\]
+$y = mx + b$
 
 Where:
 - \(y\) → Output (Target)
@@ -69,9 +65,7 @@ Predicting **Weight** based only on **Height**.
 Used when there are **multiple input features** and **one output**.
 
 **Equation:**
-\[
-y = b_0 + b_1x_1 + b_2x_2 + \dots + b_nx_n
-\]
+$y = b_0 + b_1x_1 + b_2x_2 + \dots + b_nx_n$
 
 This forms a **Plane** or **Hyperplane** in higher dimensions.
 
@@ -94,9 +88,7 @@ But real-world data is often **curved**.
 We transform features into higher powers to capture non-linear patterns.
 
 **Equation:**
-\[
-y = b_0 + b_1x + b_2x^2 + \dots
-\]
+$y = b_0 + b_1x + b_2x^2 + \dots$
 
 **Example:**  
 Predicting **Virus Growth**, which starts slowly and then increases rapidly.
